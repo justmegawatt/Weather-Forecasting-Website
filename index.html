@@ -11,35 +11,51 @@
                 height: 100%;
             }
             body {
-                background-image: url("background.jpg");
+                background-image:
+                    linear-gradient(
+                        rgba(0, 0, 0, 0.5),
+                        rgba(0, 0, 0, 0.5)
+                    ), url("background.jpg");
                 background-size: cover;
                 background-repeat: no-repeat;
                 background-position: center;
                 height: 100%;
             }
-
-            .box {
-                background-color: rgba(255, 255, 255, .85);
-                border-radius: 10px;
-                height: 300px;
+            .container {
+                padding-top: 150px;
+            }
+            .center {
                 text-align: center;
+            }
+            .white {
+                color: white;
+            }
+            p {
+                padding: 10px 0;
+            }
+
+            button {
+                margin-top: 10px;
             }
         </style>
     </head>
     <body>
         <div class="container">
             <div class="row">
-                <div class="col-md-6 offset-md-3 box">
+                <div class="col-md-6 offset-md-3 center white">
                     <h1>Weather Checker</h1>
+                    <p>Enter your city below to get a weather forecast.</p>
+                    <form action="">
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Enter your City">
+                        </div>
+                        <button class="btn btn-primary">Check My Weather</button>
+                    </form>
                 </div>
             </div>
         </div>
         <script type="text/javascript">
-            function resizeContainer() {
-                let windowHeight = window.innerHeight;
-                document.getElementById("main-container").style.minHeight = windowHeight + "px";
-            }
-            resizeContainer();
+
         </script>
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
