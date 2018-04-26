@@ -45,11 +45,11 @@
                 <div class="col-md-6 offset-md-3 center white">
                     <h1>Weather Checker</h1>
                     <p>Enter your city below to get a weather forecast.</p>
-                    <form action="">
+                    <form type="GET">
                         <div class="form-group">
-                            <input type="text" class="form-control" placeholder="Enter your City">
+                            <input type="text" class="form-control" name="city" placeholder="Enter your City, e.g. London, Paris, San Francisco">
                         </div>
-                        <button class="btn btn-primary">Check My Weather</button>
+                        <button id="checkMyWeather" class="btn btn-primary">Check My Weather</button>
                     </form>
                 </div>
             </div>
